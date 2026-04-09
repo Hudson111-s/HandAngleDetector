@@ -10,11 +10,11 @@ def get_hand_keypoint(hand_landmarks: list) -> dict:
 
 
 def hand_keypoint_to_pixel_c(hand_keypoint_dict: dict, w: int, h: int) -> dict:
-    hand_keypoint_pixel_c = hand_keypoint_dict.copy()
+    hand_keypoint_pixels = hand_keypoint_dict.copy()
     for key, hl in hand_keypoint_dict.items():
-        hand_keypoint_pixel_c[key] = (int(hl.x * w), int(hl.y * h))
+        hand_keypoint_pixels[key] = (int(hl.x * w), int(hl.y * h))
 
-    return hand_keypoint_pixel_c
+    return hand_keypoint_pixels
 
 
 def draw_circle(frame, ploc: tuple) -> None:

@@ -39,8 +39,9 @@ with HandLandmarker.create_from_options(options) as landmarker:
                 hand_keypoints = get_hand_keypoint(hand_landmarks)
 
                 # Convert to Pixel Coordinates.
-                hand_keypoint_pixel_c = hand_keypoint_to_pixel_c(hand_keypoints, w, h)
-                afa = get_all_finger_angles(hand_keypoint_pixel_c)
+                hand_keypoint_pixels = hand_keypoint_to_pixel_c(hand_keypoints, w, h)
+                
+                afa = get_all_finger_angles(hand_keypoint_pixels)
                 for angle, (t, other_t, midpoint) in afa:
                     draw_circle(frame, t)
                     draw_circle(frame, other_t)
