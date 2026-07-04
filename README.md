@@ -1,12 +1,10 @@
 > [!WARNING]  
 > This project is still in development and may be unstable.
 
-
 # HandAngleDetector
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
 This repository contains code to calculate and display angles (in degrees) that are formed between fingers using [MediaPipe](https://github.com/google-ai-edge/mediapipe) and [OpenCV](https://github.com/opencv/opencv-python).
-
 
 ## Prerequisites
 
